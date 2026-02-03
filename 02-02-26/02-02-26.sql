@@ -132,8 +132,6 @@ select * from students where email like '%gmail.com';
 
 select * from courses where course_name like 'Data%';
 
---Cities containing ‘new’ anywhere (%new%) 
-
 insert into students values (2288116613,'Steve','steve@gmail.com',null,'2026-01-19',1,null);
 
 select * from students where age is null;
@@ -164,8 +162,6 @@ select count(*), active_flag from students GROUP by active_flag;
 
 select count(*), age from students group by age;
 
---Total fees per course
-
 select course_id from enrollments group by course_id having count(course_id)>3;
 
 select age,count(age) from students group by age having avg(age)>21;
@@ -183,45 +179,3 @@ select course_name, fees from courses where fees between 3000 and 9000 order by 
 select * from students where active_flag=0 and age is not null;
 
 select student_id from enrollments group by student_id having count(student_id)>1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
