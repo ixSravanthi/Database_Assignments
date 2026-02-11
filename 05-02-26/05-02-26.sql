@@ -281,9 +281,6 @@ select * from employee join
 join department d on e.d_id=d.dept_id group by d_id ) as dept_avg
 on dept_avg.d_id=employee.d_id where employee.salary>dept_avg.dept_salary  ;
 
---Departments IN list of active departments (subquery)
---Customers NOT IN cancelled orders list
-
 select * from customers where exists(select c.id from orders o join customers c on o.customer_id=c.id);--*
 
 select * from customers where not exists(select customer_id from orders);--*
@@ -312,31 +309,4 @@ select * from products;
 select * from department;
 
 select * from employee;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
