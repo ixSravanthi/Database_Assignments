@@ -310,3 +310,45 @@ select * from department;
 
 select * from employee;
 
+<<<<<<< HEAD
+=======
+select o.product_name,case 
+	when o.amount>5000
+	then 'Avereage'
+	when o.amount>10000
+	then 'Important'
+	when o.amount>50000
+	then 'premium'
+end as order_type from customers c join orders o on c.id=o.customer_id join products p on o.product_name=p.p_namee 
+group by o.product_name,o.amount;  
+
+select * from customers where id not in (select customer_id from orders) 
+
+alter table employee drop 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 1810e00 (DB Design)
